@@ -1,8 +1,9 @@
 import { Menu, X } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import logo from "../assets/logo.png";
 import { navItems } from "../constants";
 import { Link } from "react-router-dom";
+import gsap from "gsap";
 
 const Navbar = () => {
   const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
@@ -10,25 +11,44 @@ const Navbar = () => {
     setMobileDrawerOpen(!mobileDrawerOpen);
   };
 
+  const navbarRef = useRef(null);
+
+  useEffect(() => {
+    if (navbarRef.current) {
+      // Set initial styles before animation
+      gsap.set(navbarRef.current, { y: -100, opacity: 0 });
+
+      // GSAP animation to bring the navbar into view
+      gsap.to(navbarRef.current, {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power3.out",
+        delay: 0.5, // Adjust delay as needed
+      });
+    }
+  }, []); // Empty dependency array ensures this runs once after component mounts
+
   return (
-    <nav className="sticky top-0 z-50 py-3 backdrop-blur-lg border-b border-neutral-700/80">
+    <nav
+      ref={navbarRef}
+      className="navbar sticky top-0 z-50 py-3 backdrop-blur-lg border-b border-neutral-700/80"
+    >
       <div className="container px-4 mx-auto relative text-sm">
         <div className="flex justify-between items-center">
           <div className="flex items-center flex-shrink-0">
             <Link to="/" className="flex items-center flex-shrink-0">
-              <img className="h-10 w-10 mr-2" src={logo} alt="" />
+              <img className="h-10 w-10 mr-2" src={logo} alt="Jobly logo" />
               <span className="text-xl tracking-tight">Jobly</span>
             </Link>
           </div>
 
           <ul className="hidden lg:flex ml-14 space-x-12">
-            {navItems.map((item, index) => {
-              return (
-                <li key={index}>
-                  <a href={item.href}>{item.label}</a>
-                </li>
-              );
-            })}
+            {navItems.map((item, index) => (
+              <li key={index}>
+                <Link to={item.href}>{item.label}</Link>
+              </li>
+            ))}
           </ul>
           <div className="hidden lg:flex justify-center space-x-12 items-center">
             <Link to="/login" className="py-2 px-3 border rounded-md">
@@ -48,16 +68,16 @@ const Navbar = () => {
           </div>
         </div>
         {mobileDrawerOpen && (
-          <div className="fixed right-0 z-20 bg-neutral-900 w-full p-12 flex flext-col justify-center items-center lg:hidden">
+          <div className="fixed right-0 z-20 bg-neutral-900 w-full p-12 flex flex-col justify-center items-center lg:hidden">
             <ul>
-              {navItems.map((item, index) => {
+              {navItems.map((item, index) => (
                 <li key={index} className="py-4">
-                  <a href={item.href}>{item.label}</a>
-                </li>;
-              })}
+                  <Link to={item.href}>{item.label}</Link>
+                </li>
+              ))}
             </ul>
             <div className="flex space-x-6">
-              <Link to="/login" className="py-2.px-3.border-rounded-md">
+              <Link to="/login" className="py-2 px-3 border rounded-md">
                 Sign in
               </Link>
               <Link

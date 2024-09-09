@@ -11,13 +11,16 @@ import user3 from "../assets/profile-pictures/user3.jpg";
 import user4 from "../assets/profile-pictures/user4.jpg";
 import user5 from "../assets/profile-pictures/user5.jpg";
 import user6 from "../assets/profile-pictures/user6.jpg";
+import { RxCrop } from "react-icons/rx";
+import { TbBackground } from "react-icons/tb";
+import { BsGoogle } from "react-icons/bs";
 
 export const navItems = [
-  { label: "Home", href: "#" },
-  { label: "Get Job", href: "#" },
-  { label: "Hire", href: "#" },
-  { label: "Companies", href: "#" },
-  { label :"Get Mentorship", href: "#"}
+  { label: "Home", href: "/" },
+  { label: "Get Job", href: "/get-jobs" },
+  { label: "Hire", href: "/hire" },
+  { label: "Companies", href: "/companies" },
+  { label: "Get Mentorship", href: "/get-mentorship" },
 ];
 
 export const testimonials = [
@@ -176,4 +179,43 @@ export const communityLinks = [
   { href: "#", text: "Conferences" },
   { href: "#", text: "Hackathons" },
   { href: "#", text: "Jobs" },
+];
+
+export const ServiceData = [
+  {
+    icon: RxCrop,
+    title: "Development",
+    content: "Loremdfajflafjaslfkasfasd",
+    backgroundImage: BsGoogle,
+  },
+  {
+    icon: RxCrop,
+    title: "Development",
+    content: "Loremdfajflafjaslfkasfasd",
+    backgroundImage: BsGoogle,
+  },
+  {
+    icon: RxCrop,
+    title: "Development",
+    content: "Loremdfajflafjaslfkasfasd",
+    backgroundImage: BsGoogle,
+  },
+  {
+    icon: RxCrop,
+    title: "Development",
+    content: "Loremdfajflafjaslfkasfasd",
+    backgroundImage: BsGoogle,
+  },
+  {
+    icon: RxCrop,
+    title: "Development",
+    content: "Loremdfajflafjaslfkasfasd",
+    backgroundImage: BsGoogle,
+  },
+  {
+    icon: RxCrop,
+    title: "Development",
+    content: "Loremdfajflafjaslfkasfasd",
+    backgroundImage: BsGoogle,
+  },
 ];
