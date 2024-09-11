@@ -193,17 +193,16 @@ const HeroSection = () => {
           </div>
         </div>
         {/* page 1 ends here */}
-
         {/* page 2 starts here */}
         <div
           ref={scrollRef}
           id="page2"
-          className="min-h-screen w-full bg-[#121212] py-10 px-4 md:px-10"
+          className="min-h-screen w-full bg-[#121212] lg:py-10 lg:px-4 md:px-10"
         >
           <section id="services_section" className="w-full">
             <h1
               ref={servicesSectionH1Ref}
-              className="w-full text-8xl h-auto bg-gradient-to-r from-orange-500 to-red-800 text-transparent bg-clip-text"
+              className="w-full lg:text-8xl md:text-6xl text-6xl pl-5 lg:pl-5 h-fit bg-gradient-to-r from-orange-500 to-red-800 text-transparent bg-clip-text"
             >
               Services
             </h1>
@@ -214,21 +213,21 @@ const HeroSection = () => {
             >
               <div
                 id="page2-card1"
-                className="w-full flex flex-row gap-x-8 justify-center mt-16 align-center"
+                className="w-full flex lg:flex-row md:flex-row flex-col gap-x-8 justify-center mt-16 align-center"
                 ref={card1Ref}
               >
                 <img
                   src="https://images.pexels.com/photos/935977/pexels-photo-935977.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                  className="w-2/6 rounded-md transition-shadow duration-1000 ease-in-out hover:shadow-xl hover:shadow-orange-500 "
+                  className="lg:w-2/6 md:4/6 5/6 rounded-md transition-shadow duration-1000 ease-in-out hover:shadow-xl hover:shadow-orange-500 "
                 />
                 <div
                   id="page2-card1-text"
-                  className="w-3/6 flex flex-col gap-y-30 px-10 align-center justify-center"
+                  className="lg:w-3/6 md:w-4/6 w-6/6 flex flex-col gap-y-30 lg:px-10 px-3 mt-5 lg:mt-0 align-center justify-center"
                 >
-                  <h1 className="text-5xl text-center">
+                  <h1 className="lg:text-5xl text-3xl text-center">
                     Find Jobs and Internships
                   </h1>
-                  <p className="mt-10 text-justify text-wrap">
+                  <p className="mt-10 text-justify">
                     Explore a vast array of job opportunities and internships
                     tailored to your skills and preferences. At Jobly, you can
                     easily find positions in various industries without any
@@ -244,12 +243,16 @@ const HeroSection = () => {
               </div>
               <div
                 id="page2-card2"
-                className="w-full flex flex-row gap-x-8 justify-center mt-16 align-center"
+                className="w-full flex lg:flex-row-reverse md:flex-row flex-col gap-x-8 justify-center mt-16 align-center"
                 ref={card2Ref}
               >
+                <img
+                  src="https://images.pexels.com/photos/5668859/pexels-photo-5668859.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  className="lg:w-2/6 md:4/6 5/6 rounded-md transition-shadow duration-1000 ease-in-out hover:shadow-xl hover:shadow-orange-500 "
+                />
                 <div
                   id="page2-card1-text"
-                  className="w-3/6 flex flex-col gap-y-30 px-10 align-center justify-center"
+                  className="lg:w-3/6 md:w-4/6 w-6/6 flex flex-col gap-y-30 lg:px-10 px-3 mt-5 lg:mt-0 align-center justify-center"
                 >
                   <h1 className="text-5xl text-center">
                     Hire skilled employees
@@ -269,23 +272,19 @@ const HeroSection = () => {
                     Hire employees
                   </button>
                 </div>
-                <img
-                  src="https://images.pexels.com/photos/5668859/pexels-photo-5668859.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                  className="w-2/6 rounded-md transition-shadow duration-1000 ease-in-out hover:shadow-xl hover:shadow-orange-500 "
-                />
               </div>
               <div
                 id="page2-card3"
-                className="w-full flex flex-row gap-x-8 justify-center mt-16 align-center"
+                className="w-full flex lg:flex-row md:flex-row flex-col gap-x-8 justify-center mt-16 align-center"
                 ref={card3Ref}
               >
                 <img
                   src="https://images.pexels.com/photos/5921485/pexels-photo-5921485.jpeg?auto=compress&cs=tinysrgb&w=600"
-                  className="w-2/6 rounded-md transition-shadow duration-1000 ease-in-out hover:shadow-xl hover:shadow-orange-500 "
+                  className="lg:w-2/6 md:4/6 5/6 rounded-md transition-shadow duration-1000 ease-in-out hover:shadow-xl hover:shadow-orange-500 "
                 />
                 <div
                   id="page2-card1-text"
-                  className="w-3/6 flex flex-col gap-y-30 px-10 align-center justify-center"
+                  className="lg:w-3/6 md:w-4/6 w-6/6 flex flex-col gap-y-30 lg:px-10 px-3 mt-5 lg:mt-0 align-center justify-center"
                 >
                   <h1 className="text-5xl text-center">
                     Get Mentorship and Guidance
@@ -310,35 +309,35 @@ const HeroSection = () => {
           </section>
         </div>
         {/* page 2 end here */}
-
         {/*page3 starts here*/}
         <div
           id="page3"
-          className="relative min-h-screen h-auto w-full bg-[#121212] py-10 px-4 md:px-10 "
+          className="relative h-fit mb-9xl w-full bg-[#121212] py-10 px-4 md:px-10 "
         >
           <div className="mt-20 relative z-10 text-center flex flex-col items-center justify-center">
             <h1
               ref={howJoblyWorksSectionH1Ref}
-              className="w-full text-8xl h-auto bg-gradient-to-r from-orange-500 to-red-800 text-transparent bg-clip-text"
+              className="w-full lg:text-8xl text-6xl h-auto bg-gradient-to-r from-orange-500 to-red-800 text-transparent bg-clip-text"
             >
               How Jobly works?
             </h1>
             <div
               ref={howJoblyWorksRef}
-              className="flex items-center w-full space-x-20 justify-center flex-row whitespace-wrap px-4 mt-30"
+              className="flex items-center w-full space-x-20 justify-center lg:flex-row flex-col whitespace-wrap px-4 mt-30"
             >
-              <img src={process_png} className=" w-3/5 h-2/4" />
-              <button className="bg-gradient-to-r from-orange-500 to-red-800 text-white rounded-md py-3 px-7">
+              <img
+                src={process_png}
+                className=" lg:w-3/5 lg:h-2/4 w-5/5 h-3/4"
+              />
+              <button className="bg-gradient-to-r from-orange-500 to-red-800 text-white rounded-md lg:py-3 lg:px-7 px-4 py-3">
                 Find jobs now..
               </button>
             </div>
           </div>
         </div>
-
-        {/*page3 ends here*/}
+        {/* page3 ends here
         <div className="page-divider w-full h-px bg-orange-200" />
-
-        {/*page4 starts here*/}
+        page4 starts here */}
         <div
           id="page4"
           className="relative flex flex-col align-center justify-center h-fit w-full bg-[#121212] py-10 px-4 md:px-10 "
@@ -347,7 +346,7 @@ const HeroSection = () => {
             If you have any doubts and feedbacks feel free to ask..
           </h2>
           <form
-            className="mt-8 mx-auto px-40 w-2/4 space-y-6"
+            className="mt-8 lg:mx-auto lg:px-40 px-9 lg:w-2/4 w-4/4 space-y-6"
             onSubmit={handleSubmission}
           >
             <div className="rounded-md shadow-sm">
@@ -417,11 +416,6 @@ const HeroSection = () => {
                 />
               </div>
             </div>
-
-            {/* {error && (
-              <div className="text-red-500 text-center mb-4">{error}</div>
-            )} */}
-
             <div>
               <button
                 type="submit"
