@@ -256,9 +256,9 @@ const SearchJobs = () => {
             </div>
 
             <div
-                className="h-screen no-scrollbar overflow-x-hidden box-border flex flex-row w-full backdrop-blur bg-[#0c0c0ca1] absolute z-10"
+                className="h-screen no-scrollbar overflow-x-hidden box-border flex md:flex-col flex-col lg:flex-row w-full backdrop-blur bg-[#0c0c0ca1] absolute z-10"
             >
-                <div id="filter-section" className="w-3/12 h-screen relative">
+                <div id="filter-section" className="lg:w-3/12 md:w-full h-screen relative">
                     <div
                         id="filter-card"
                         className="backdrop-blur-lg bg-[#3a3a3a] rounded-md w-4/5 h-fit mx-auto mt-20"
@@ -513,7 +513,7 @@ const SearchJobs = () => {
 
                 <div
                     id="job-cards-sections"
-                    className="w-9/12 px-10 mt-6 h-full flex flex-col no-scrollbar"
+                    className="lg:w-9/12 md:w-full px-10 mt-6 h-full flex flex-col no-scrollbar"
                 >
                     <div>
                         <TablePagination
